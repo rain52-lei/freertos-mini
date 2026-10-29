@@ -1,0 +1,15 @@
+【02_双灯不同周期】
+
+底座: 正点原子 标准例程-HAL库版本 / 实验1 跑马灯实验
+内核: MiniFreeRTOS (Middlewares/MiniFreeRTOS)
+类型: led2
+
+打开工程:
+  Projects\MDK-ARM\atk_f407.uvprojx
+
+编译注意:
+  1. 使用 MDK + STM32F4xx DFP
+  2. 已删除 stm32f4xx_it.c 中 SysTick/PendSV, 改由 rtos.c 提供
+  3. SysTick 中会 HAL_IncTick, 保持 HAL 延时可用
+
+硬件: 探索者 F407 V3; 串口工程需 P10 接通; TFT 工程建议 DC 供电

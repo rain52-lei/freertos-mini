@@ -1,0 +1,40 @@
+实例工程总览（已按官方「标准例程-HAL库版本」重建）
+
+路径: G:\407freertos\实例工程
+
+一、每个工程怎么打开
+  打开:  该目录\Projects\MDK-ARM\atk_f407.uvprojx
+  不要打开旧的根目录 project.uvprojx（那是以前的小工程格式）
+
+二、工程组成
+  底座 = 正点原子 HAL 标准例程（Drivers/BSP/SYSTEM/HAL 完整）
+  内核 = MiniFreeRTOS（Middlewares\MiniFreeRTOS）
+  业务 = User\main.c（多任务演示）
+
+三、列表与官方对应
+  01_单灯心跳              <= 实验1 跑马灯
+  02_双灯不同周期          <= 实验1 跑马灯
+  03_蜂鸣器提示音          <= 实验2 蜂鸣器
+  04_按键控制灯            <= 实验3 按键输入
+  05_按键队列驱动蜂鸣器    <= 实验3 + BEEP + 队列
+  06_串口状态打印          <= 实验5 串口通信
+  07_串口命令控制          <= 实验5 串口通信
+  08_ADC采样超限报警       <= 实验21 光敏传感器
+  09_I2C读EEPROM           <= 实验24 IIC
+  10_SPI_FLASH读写校验     <= 实验25 SPI
+  11_红外遥控控灯          <= 实验29 红外遥控
+  12_温湿度采集报警        <= 实验31 DHT11
+  13_TF卡写日志            <= 实验38 SD卡
+  14_LCD状态仪表盘         <= 实验13 TFTLCD
+  15_板载监控终端          <= 实验13 TFTLCD + KEY + BEEP
+  16_TFT显示RAIN           <= 实验13 TFTLCD（显示 RAIN）
+
+四、TFT 显示 RAIN（优先试这个）
+  路径: G:\407freertos\实例工程\16_TFT显示RAIN\Projects\MDK-ARM\atk_f407.uvprojx
+  4.3 寸并口屏插紧，建议 DC 供电
+  预期: 白底红色 RAIN，串口打印 LCD ID
+
+五、注意
+  - 串口工程: 跳线 P10 接通，115200
+  - 已去掉 stm32f4xx_it.c 里的 SysTick/PendSV，改由 rtos.c 提供
+  - 旧的寄存器版/Mini小工程可忽略（16_TFT显示RAIN_Mini 等）

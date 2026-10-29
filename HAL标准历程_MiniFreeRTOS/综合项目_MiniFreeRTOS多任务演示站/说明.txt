@@ -1,0 +1,25 @@
+【综合项目_MiniFreeRTOS多任务演示站】—— 手机式 Phone OS
+
+定位:
+  综合性最强的历程整合 Demo。触摸屏当手机屏，九宫格应用，
+  状态栏显示时间/信号/电量/通知，按键当 Home/Back，串口当调试桥。
+
+工程: Projects\MDK-ARM\atk_f407.uvprojx
+源码: User\main.c (逐行中文注释)
+
+使用:
+  1. 接好 TFT(MCU屏) 与触摸，注意跳线/背光
+  2. Keil 打开 uvprojx → Rebuild → Download
+  3. 触摸点 App；KEY0 回桌面；串口 115200 输入 help
+
+任务:
+  UI(5) 输入(4) 串口(4) 蜂鸣(3) LED(2) 监控(2) 空闲(0)
+
+同步:
+  事件队列 g_q | 短鸣信号量 | 打印互斥 | LCD 互斥
+
+注意:
+  - SysTick/PendSV 在 MiniFreeRTOS rtos.c
+  - 电阻屏首次可能要校准(参考触摸实验 KEY0)
+  - 4.3 寸注意 DC 跳线；勿插错 RGB 屏
+  - MAX_TASKS=8，当前 7 任务

@@ -1,0 +1,43 @@
+# Keil / Arm build output
+**/Objects/
+**/Listings/
+**/Output/
+**/DebugConfig/
+*.o
+*.obj
+*.d
+*.axf
+*.elf
+*.hex
+*.bin
+*.map
+*.dep
+*.lnp
+*.lst
+*.crf
+*.htm
+*.html
+*.build_log.*
+
+# IDE sessions and local state
+*.uvopt
+*.uvoptx
+*.uvguix
+*.uvguix.*
+*.dbgconf
+*.dbgconf.*
+.vscode/
+.idea/
+
+# Backups, temporary files and credentials
+*.bak
+*.bak_*
+*.tmp
+*.log
+~$*
+__pycache__/
+.env
+.env.*
+!.env.example
+*.pem
+*.key

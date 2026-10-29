@@ -1,0 +1,6 @@
+【16 TFT显示RAIN】
+底座: 官方 实验13 TFTLCD（MCU屏）实验
+内核: MiniFreeRTOS
+打开: Projects\MDK-ARM\atk_f407.uvprojx
+硬件: 4.3寸并口屏插紧, 建议DC供电
+预期: 白底红色 RAIN + ID, 红灯闪烁
